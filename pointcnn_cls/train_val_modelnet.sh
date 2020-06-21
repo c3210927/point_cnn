@@ -3,7 +3,7 @@
 gpu=
 setting=
 models_folder="../../models/cls/"
-train_files="../../data/modelnet/train_files.txt"
+train_files="../data/modelnet/train_files.txt"
 val_files="../../data/modelnet/test_files.txt"
 
 usage() { echo "train/val pointcnn_cls with -g gpu_id -x setting options"; }
