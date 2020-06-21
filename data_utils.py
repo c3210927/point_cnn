@@ -123,6 +123,7 @@ def load_cls(filelist):
     labels = []
 
     folder = os.path.dirname(filelist)
+    print(os.path)
     for line in open(filelist):
         filename = os.path.basename(line.rstrip())
         data = h5py.File(os.path.join(folder, filename))
