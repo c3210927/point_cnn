@@ -127,12 +127,10 @@ def load_cls(filelist):
         filename = os.path.basename(line.rstrip())
         data = h5py.File(os.path.join(folder, filename))
         if 'normal' in data:
-            print(data["normal"][...])
             points.append(np.concatenate([data['data'][...], data['normal'][...]], axis=-1).astype(np.float32))
         else:
             points.append(data['data'][...].astype(np.float32))
         labels.append(np.squeeze(data['label'][:]).astype(np.int64))
-    print(np.concatenate(points, axis=0))
     return (np.concatenate(points, axis=0),
             np.concatenate(labels, axis=0))
 

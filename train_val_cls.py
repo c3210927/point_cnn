@@ -70,8 +70,7 @@ def main():
     # Prepare inputs
     print('{}-Preparing datasets...'.format(datetime.now()))
     data_train, label_train, data_val, label_val = setting.load_fn(args.path, args.path_val)
-    print(setting)
-    exit()
+
     if setting.balance_fn is not None:
         num_train_before_balance = data_train.shape[0]
         repeat_num = setting.balance_fn(label_train)
