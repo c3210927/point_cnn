@@ -2,9 +2,10 @@
 
 gpu=
 setting=
-models_folder="../../models/cls/"
-train_files="../data/modelnet/train_files.txt"
-val_files="../../data/modelnet/test_files.txt"
+models_folder="/content/drive/My Drive/model/"
+train_files="/content/drive/My Drive/modelnet/modelnet/train_files.txt"
+val_files="/content/drive/My Drive/modelnet/modelnet/test_files.txt"
+load_ckpt="/content/drive/My Drive/ckpt/"
 
 usage() { echo "train/val pointcnn_cls with -g gpu_id -x setting options"; }
 
@@ -46,5 +47,5 @@ fi
 
 
 echo "Train/Val with setting $setting on GPU $gpu!"
-CUDA_VISIBLE_DEVICES=$gpu python3 ../train_val_cls.py -t $train_files -v $val_files -s $models_folder -m pointcnn_cls -x $setting
+CUDA_VISIBLE_DEVICES=$gpu python3 ../train_val_cls.py -t $train_files -v $val_files -s $models_folder -m pointcnn_cls -x $setting -l $load_ckpt
 #> $models_folder/pointcnn_cls_$setting.txt 2>&1 &
