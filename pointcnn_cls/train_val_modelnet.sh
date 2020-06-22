@@ -2,10 +2,10 @@
 
 gpu=
 setting=
-models_folder="/content/drive/My Drive/model/"
-train_files="/content/drive/My Drive/modelnet/modelnet/train_files.txt"
-val_files="/content/drive/My Drive/modelnet/modelnet/test_files.txt"
-load_ckpt="/content/drive/My Drive/ckpt/"
+models_folder="/content/drive/My\ Drive/model/"
+train_files="/content/drive/My\ Drive/modelnet/modelnet/train_files.txt"
+val_files="/content/drive/My\ Drive/modelnet/modelnet/test_files.txt"
+load_ckpt="/content/drive/My\ Drive/ckpt/"
 
 usage() { echo "train/val pointcnn_cls with -g gpu_id -x setting options"; }
 
